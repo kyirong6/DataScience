@@ -1,0 +1,4 @@
+1. For np_summary and pd_summary, NumPy felt easier to work with. Also, the code with NumPy is easier to read.
+
+2. pivot_months_pandas = around 23.7 ms. pivot_months_loops = around 760 ms. It is much faster because rather than
+   looping and executing a function on each value, we are using pandas tools to apply functions on entire arrays.
