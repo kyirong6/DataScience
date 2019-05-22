@@ -1,0 +1,10 @@
+1. The result of this calculation is: timestamp values (x:in seconds) multiplied by the slope(m) of the best fit line
+   plus the y intercept(b). This is classic y = mx + b. The type of value is a number (float) representing a potential
+   score based on the timestamp. The values of y represent a prediction based on the linear regresstion model of the
+   data.
+
+2. This produces a fit line on the graph because the x values being used for the model are the timestamps which are
+   just another representation of the date object, therefore, there are also an equal amount of them. The y values are
+   the same as the data. On the graph, the ratings (y axis) are not changing and only the x axis is. Therefore, when we
+   plot the line, the x values are paired correctly because there are an equal amount and the y values are properly fit
+   for the line.
