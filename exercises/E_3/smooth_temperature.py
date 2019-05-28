@@ -25,7 +25,6 @@ plt.plot(cpu_data['timestamp'], loess_smoothed[:, 1], 'r-', label="LOESS-smoothe
 
 # ------------------KALMAN FILTERING---------------------
 kalman_data = cpu_data[['temperature', 'cpu_percent', 'sys_load_1']]
-print(kalman_data)
 kalman_sd = kalman_data.std()
 
 initial_state = kalman_data.iloc[0]
