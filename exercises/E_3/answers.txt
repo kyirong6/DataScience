@@ -1,0 +1,7 @@
+1. When smoothing the CPU temperature, Kalman smoothing delivered better results. The resulting smoothing was more accurate
+and closer to the observations than the LOESS smoothing because they take more information into account. Moreover, the
+LOESS smoothing does not take as much information and is less accurate.
+
+2. Those extra variables can be used to create a multivariate reggresional model or another statistical model
+that will help us determine the next coordinates. With the more data, it could help us be more accurate. However, there
+is a chance of overfitting.

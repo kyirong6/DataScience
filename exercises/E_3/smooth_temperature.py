@@ -11,8 +11,7 @@ def to_timestamp(x):
 
 
 # ----------------LOESS SMOOTHING------------------
-#f1 = sys.argv[1]
-f1 = "sysinfo.csv"
+f1 = sys.argv[1]
 cpu_data = pd.read_csv(f1, parse_dates=['timestamp'])
 cpu_data['timestamp'] = cpu_data['timestamp'].apply(to_timestamp)
 
@@ -40,5 +39,4 @@ kf = KalmanFilter(initial_state_mean=initial_state,
 kalman_smoothed, _ = kf.smooth(kalman_data)
 plt.plot(cpu_data['timestamp'], kalman_smoothed[:, 0], 'g-', label="Kalman-smoothed line")
 plt.legend()
-#plt.savefig('cpu.svg')
-plt.show()
+plt.savefig('cpu.svg')

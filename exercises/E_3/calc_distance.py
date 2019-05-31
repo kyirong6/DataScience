@@ -10,6 +10,7 @@ def output_gpx(points, output_filename):
     Output a GPX file with latitude and longitude from the points DataFrame.
     """
     from xml.dom.minidom import getDOMImplementation
+
     def append_trkpt(pt, trkseg, doc):
         trkpt = doc.createElement('trkpt')
         trkpt.setAttribute('lat', '%.8f' % (pt['lat']))
@@ -50,7 +51,7 @@ def distance(data):
 def smooth(data):
     kalman_data = data[['lat', 'lon']]
     initial_state = kalman_data.iloc[0]
-    observation_covariance = np.diag([.17, .17]) ** 2
+    observation_covariance = np.diag([.18, .18]) ** 2
     transition = [[1, 0], [0, 1]]
     transition_covariance = np.diag([0.1, 0.1]) ** 2
     kf = KalmanFilter(initial_state_mean=initial_state,
