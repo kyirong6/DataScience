@@ -27,29 +27,29 @@ def best_tmax(city, stations):
     return stations.iloc[ind].avg_tmax
 
 
+def main():
+    stations_file = sys.argv[1]
+    city_data = sys.argv[2]
+    svg = sys.argv[3]
 
-#stations_file = sys.argv[1]
-#city_data = sys.argv[2]
-#f3 = sys.argv[3]
-stations_file = "stations.json.gz"
-city_data = "city_data.csv"
-f3 = "city_data.csv"
+    stations = pd.read_json(stations_file, lines=True)
+    stations.avg_tmax = stations.avg_tmax.div(10)
 
-stations = pd.read_json(stations_file, lines=True)
-stations.avg_tmax = stations.avg_tmax.div(10)
+    cities = pd.read_csv(city_data, sep=',')
+    cities = cities.dropna()
+    cities.area = cities.area.mul(0.000001)
+    cities = cities.query('area < 10000')
+    cities['density'] = cities.population/cities.area
+    cities['best_tmax'] = 0
 
-cities = pd.read_csv(city_data, sep=',')
-cities = cities.dropna()
-cities.area = cities.area.mul(0.000001)
-cities = cities.query('area < 10000')
-cities['density'] = cities.population/cities.area
-cities['best_tmax'] = 0
+    cities.best_tmax = cities.apply(best_tmax, stations=stations, axis=1)
 
-cities.best_tmax = cities.apply(best_tmax, stations=stations, axis=1)
+    plt.scatter(cities.best_tmax, cities.density)
+    plt.title("Temperature vs Population Density")
+    plt.xlabel("Avg Max Temperature (\u00b0C)")
+    plt.ylabel("Population Density (people/km\u00b2)")
+    plt.savefig(svg)
 
-plt.scatter(cities.best_tmax, cities.density)
-plt.title("Temperature vs Population Density")
-plt.xlabel("Avg Max Temperature (\u00b0C)")
-plt.ylabel("Population Density (people/km\u00b2)")
-plt.show()
 
+if __name__ == '__main__':
+    main()
