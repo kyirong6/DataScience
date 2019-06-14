@@ -1,0 +1,14 @@
+1. np.sqrt
+
+2. The orignal t-test tried to deduce how likely the population means of the 2 data sets (weekday vs weekend containing
+subreddit canada, 2012/2013) are the same using their corresponding sample data. The test yielded a strong case for
+rejecting the null hypothesis. The transformed t-test performed the t-test on transformed data due to the original data not
+aligning with the assumptions (skewness, failing normality test, etc...). This transformation and test answers a slightly
+different question. How likely are the population means of the transformed data equal to each other? If we are rejecting
+the null hypothesis, this would mean the sample means of the transformed data are likely to be different.
+
+3. Even though the CLT in our exercise is looking at the distribution of our sample means, this test seems most appropriate
+as it will test the equality of means of sample means of the weekly data. From the resulting t-test, it is reasonable to
+infer one is different than the other from the resulting p value.
+
+4. Based on our tests, we aren't able to get this answer. However, upon further analysis, it would be weekends.

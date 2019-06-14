@@ -1,0 +1,75 @@
+data-1.csv: This data contains (x,y) pairs that have a positive linear relationship.
+    * x:
+        * mean: 8.717696
+        * sd: 12.155517
+        * range: [-22.635878, 35.237055]
+    * y:
+        * mean: 12.522874
+        * sd:6.639964
+        * range: [-2.565088, 27.384153]
+    * corr: .950326
+
+
+
+data-2.csv: This data contains (x,y) pairs that have a positive linear relationship with a few outliers for low and high values of x.
+    * x:
+        * mean: -.710787
+        * sd: 11.481584
+        * range: [-33.271113, 27.647000]
+    * y:
+        * mean: -.748987
+        * sd: 6.257918
+        * range: [-18.621804, 14.147315]
+    * corr: .955153
+
+
+
+data-3.csv: this data contains (x,y) pairs that are grouped into 4 bunches increasing positively.
+    * x:
+        * mean: 0.968907
+        * sd: 2.235558
+        * range: [-2.449064, 4.518885]
+    * y:
+        * mean: 8.508535
+        * sd: 1.149301
+        * range: [6.641734, 10.551871]
+    * corr: .981937
+
+
+
+data-4.csv: this (x,y) paired data does not show a linear correlation, has a lot spread, shows the message "SFU"
+    * x:
+        * mean: 49.905086
+        * sd: 28.508611
+        * range: [0.000000, 87.376700]
+    * y:
+        * mean: 18.553837
+        * sd: 16.545896
+        * range: [0.000000, 44.565040]
+    * corr: -0.081193
+
+
+
+data-5.csv: this (x,y) paired data does not show a linear correlation, has a lot of spread, and is grouped in values of x.
+    * x:
+        * mean: 49.909994
+        * sd: 28.500001
+        * range: [4.337892, 91.052863]
+    * y:
+        * mean: 18.555525
+        * sd: 16.540796
+        * range: [0.055498, 49.934197]
+    * corr: -0.088236
+
+
+
+data-6.csv: this (x,y) paired data shows a strong linear relationship with a few outliers.
+    * x:
+        * mean: 7.216155
+        * sd: 11.921599
+        * range: [-24.333821, 5.402139]
+    * y:
+        * mean: 7.602215
+        * sd: 11.764382
+        * range: [-22.956357, 36.079874]
+    * corr: 0.935069
