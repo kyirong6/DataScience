@@ -1,0 +1,8 @@
+1. No, i don't feel like we are p-hacking. p-hacking is adjusting/collecting data
+to match a conclusion we want. I am comfortable with the conclusion.
+
+2. We would have done 21 t-tests. The probability would be very low. .05/21.
+
+3. Based on the graph of sample means: partition sort, qs1, (qs3, qs2, qs5), qs4, and mergesort.
+   The pairs that we could not conclude were significantly different are:
+   (qs2 & qs3), (qs2 & qs5), (qs3 & qs5)

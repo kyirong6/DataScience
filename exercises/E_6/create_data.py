@@ -24,7 +24,8 @@ def main():
             val[i] = en-st
         data[names[q]] = val
         q += 1
-    print(data)
+
+    data.to_csv('data.csv', index=False)
 
 
 if __name__ == '__main__':
