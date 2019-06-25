@@ -1,14 +1,14 @@
 import time
-from exercises.E_6 import implementations
+#from exercises.E_6 import implementations    ----had to use this import due to IDE and project structure-----
+from implementations import all_implementations
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import scipy.stats as sp
+
 
 
 def main():
 
-    all_implementations = implementations.all_implementations
+    #all_implementations = implementations.all_implementations    ----due to ide and project structure---
 
     q = 0
     data = pd.DataFrame()
