@@ -95,7 +95,7 @@ def main():
 
     model, coefficients = get_trained_coefficients(X_train, y_train)
     output_regression(coefficients)
-    print("Training score: %g\nTesting score: %g" % (model.score(X_train, y_train), model.score(X_valid, y_valid)))
+    #print("Training score: %g\nTesting score: %g" % (model.score(X_train, y_train), model.score(X_valid, y_valid)))
 
     plot_errors(model, X_valid, y_valid)
     smooth_test(coefficients, test)

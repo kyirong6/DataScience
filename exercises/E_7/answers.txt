@@ -1,0 +1,5 @@
+1. Yes, the residuals are close enough to normal espicially upon removing the outliers. Furthermore, we can reasonably
+conclude that our ratings are increasing based on our OLS regression.
+
+2. No, the kalman filter is now too sensitive to the noise. Rather than finding the true values within the noise, it is
+now a bit more jagged then our original kalman filter.

@@ -100,18 +100,15 @@ def main(infile):
         FunctionTransformer(to_lab, validate=False),
         GaussianNB()
     )
+
     model_lab.fit(X_train, y_train)
-
+    y_predicted_ab = model_lab.predict(X_valid)
     print(model_lab.score(X_valid, y_valid))
-
-
-
 
     plot_predictions(model_rgb)
     plt.savefig('predictions_rgb.png')
     plot_predictions(model_lab)
     plt.savefig('predictions_lab.png')
-
 
 
 if __name__ == '__main__':
