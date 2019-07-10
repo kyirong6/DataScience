@@ -1,0 +1,7 @@
+1. SVM classifier with RGB did the best. This is may be because the data is naturally not split linearly and using
+the rbf parameter is perfect for this situation. Moreover, SVM finds an optimal boundary between the categories which
+is great for this type of data.
+
+2. Yes, these are reasonable mistakes because the locations that are incorrect are close to each other. Therefore, they
+will have similar data points. Some additional features may decrease the incorrect predictions: humidity, number of snow days,
+number of rain days, sunshine hours.
