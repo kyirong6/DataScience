@@ -1,0 +1,5 @@
+1. I cached three time. Once in the initial spark.read(), another on the first filter, and another on the second filter. If
+you didn't use cache anywhere it would have slowed down the program because of lazy evaluations. It wont store the results for
+later use.
+
+2. Without broadcasting: 47.767s. With broadcasting: 39.033s. Using the broadcasting improved the speed of the program.

@@ -36,7 +36,8 @@ def main(in_directory, out_directory):
     joined_data = wiki.join(scores, on="filename")
     joined_data = joined_data.filter(joined_data["count"] == joined_data["max(count)"])
     joined_data = joined_data.select(joined_data["dateTime"], joined_data["title"], joined_data["max(count)"])
-    joined_data = joined_data.orderBy("dateTime", ascending=False)
+    joined_data = joined_data.orderBy("dateTime")
+    joined_data.show(49)
 
     joined_data.write.csv(out_directory, mode='overwrite')
 
